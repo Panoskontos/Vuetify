@@ -32,6 +32,10 @@
 
         <v-divider></v-divider>
 
+
+
+<!-- Icons from -->
+<!-- https://icon-sets.iconify.design/mdi/database/ -->
 <v-list nav class="bg-indigo">
        <v-list-item prepend-icon="mdi-view-dashboard" title="Dashboard" value="inbox">
        </v-list-item>
@@ -45,36 +49,71 @@
         <v-list-item prepend-icon="mdi-clock-end" title="Minions" value="Minions"></v-list-item>
         <br>
         <v-list-item prepend-icon="mdi-clock-start" title="Clock-in" value="clockin"></v-list-item>
+        <br>
+        <v-list-item prepend-icon="mdi-database" title="Databse" value="clockin"></v-list-item>
   </v-list>
 
 </v-navigation-drawer>
 
 <!-- <AlcaliDesignVue/> -->
 <v-main class="body ">
-    <v-card height="200px" class="bg-transparent mt-5 mx-10 d-flex justify-center" >
-      
-      <v-card height="200px" width="40%" class="bg-blue-grey-darken-3 mr-10">
-      </v-card>      
-      
-      <v-card height="200px" width="30%" class="bg-blue-grey-darken-3 ">
-      </v-card>      
-      
-      <v-card height="200px" width="40%" class="bg-blue-grey-darken-3 ml-10">
-      </v-card>      
+    <div height="120px" class="bg-transparent mt-5 mx-10 d-flex justify-center" >
 
-    </v-card>
+     <v-hover v-slot="{ isHovering, props }">
+      <v-card 
+       v-bind="props"
+        :class="`elevation-${isHovering ? 24 : 6}`"
+      height="120px" width="40%" class="bg-blue-grey-darken-3 mr-10">
+      </v-card>      
+     </v-hover>
+      
+      <v-hover v-slot="{ isHovering, props }">
+      <v-card 
+       v-bind="props"
+        :class="`elevation-${isHovering ? 24 : 6}`"
+      height="120px" width="30%" class="bg-blue-grey-darken-3 ">
+      </v-card>
+      </v-hover>
+      
+      
+      <v-hover v-slot="{ isHovering, props }">
+      <v-card 
+       v-bind="props"
+        :class="`elevation-${isHovering ? 24 : 6}`"
+      height="120px" width="40%" class="bg-blue-grey-darken-3 ml-10">
+      </v-card>
+      </v-hover>      
+
+    </div>
     
-    <v-card  height="200px" class="bg-transparent mx-10 mt-10 d-flex justify-center" > 
-        <v-card height="200px" width="50%" class="bg-blue-grey-darken-3 mr-10">
+    <div  height="200px" class="bg-transparent mx-10 mt-10 d-flex justify-center" > 
+        
+        <v-hover v-slot="{ isHovering, props }">
+      <v-card 
+       v-bind="props"
+        :class="`elevation-${isHovering ? 24 : 6}`"
+        
+        height="200px" width="50%" class="bg-blue-grey-darken-3 mr-10">
         </v-card>      
+        </v-hover>
+
+    <v-hover v-slot="{ isHovering, props }">
+      <v-card 
+       v-bind="props"
+        :class="`elevation-${isHovering ? 24 : 6}`"
+         height="200px" width="50%" class="bg-blue-grey-darken-3 ">
+        </v-card>
+    </v-hover>     
     
-        <v-card height="200px" width="50%" class="bg-blue-grey-darken-3 ">
-        </v-card>     
+    </div>
     
+     <v-hover v-slot="{ isHovering, props }">
+    <v-card 
+    v-bind="props"
+        :class="`elevation-${isHovering ? 24 : 6}`"
+    height="320px" class="bg-blue-grey-darken-3 mx-10 mt-10" >      
     </v-card>
-    
-    <v-card  height="200px" class="bg-blue-grey-darken-3 mx-10 mt-10" >      
-    </v-card>
+    </v-hover>
 </v-main>
     
   </v-app>
