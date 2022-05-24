@@ -111,7 +111,9 @@
     <v-card 
     v-bind="props"
         :class="`elevation-${isHovering ? 24 : 6}`"
-    height="320px" class="bg-blue-grey-darken-3 mx-10 mt-10" >      
+    height="320px" class="bg-blue-grey-darken-3 mx-10 mt-10" 
+     :style="{ 'background-color': hover ? 'red' : '#BB86FC' }"
+    >      
     </v-card>
     </v-hover>
 </v-main>
