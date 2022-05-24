@@ -1,8 +1,8 @@
 <template>
   <v-app>
-    <v-app-bar prominent>
+    <v-app-bar prominent class="bg-grey-darken-4">
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-      <v-app-bar-title>Logo</v-app-bar-title>
+      <v-app-bar-title></v-app-bar-title>
       <v-btn icon>
       <v-icon>mdi-magnify</v-icon>
       </v-btn>
@@ -33,163 +33,64 @@
         <v-divider></v-divider>
 
 <v-list nav class="bg-indigo">
-       <v-list-item prepend-icon="mdi-view-dashboard" title="Inbox" value="inbox">
+       <v-list-item prepend-icon="mdi-view-dashboard" title="Dashboard" value="inbox">
        </v-list-item>
-        <v-list-item prepend-icon="mdi-account-supervisor-circle" title="Supervisors" value="supervisors"></v-list-item>
+       <br>
+        <v-list-item prepend-icon="mdi-account-supervisor-circle" title="Keys" value="supervisors"></v-list-item>
+        <br>
         <v-list-item prepend-icon="mdi-email" title="Users" value="Users"></v-list-item>
+        <br>
         <v-list-item prepend-icon="mdi-calendar" title="Jobs" value="Jobs"></v-list-item>
+        <br>
         <v-list-item prepend-icon="mdi-clock-end" title="Minions" value="Minions"></v-list-item>
+        <br>
         <v-list-item prepend-icon="mdi-clock-start" title="Clock-in" value="clockin"></v-list-item>
   </v-list>
 
 </v-navigation-drawer>
 
-  
+<!-- <AlcaliDesignVue/> -->
+<v-main class="body ">
+    <v-card height="200px" class="bg-transparent mt-5 mx-10 d-flex justify-center" >
+      
+      <v-card height="200px" width="40%" class="bg-blue-grey-darken-3 mr-10">
+      </v-card>      
+      
+      <v-card height="200px" width="30%" class="bg-blue-grey-darken-3 ">
+      </v-card>      
+      
+      <v-card height="200px" width="40%" class="bg-blue-grey-darken-3 ml-10">
+      </v-card>      
 
-  
-    <v-main>
-      <v-card height="300px" class="d-flex align-center justify-space-around">
-        <div >
-          <v-card height="200px" width="25vw" :elevation="5" class=" rounded-lg bg-grey-darken-4 text-white ">
-         
-    <div class="text-center">
-      Conformity
-    </div>     
-         
-    <div class="mt-4" >
-    <v-progress-linear
-      v-model="power"
-      color="indigo-darken-4"
-      height="25"
-     >
-      <v-progress-linear
-        model-value="25"
-        color="yellow"
-        height="25"
-        reverse
-        >
-        
-      </v-progress-linear>
-    </v-progress-linear>
-
-    <br>
-
-    <v-progress-linear
-      v-model="skill"
-      color="blue-grey"
-      height="25"
-    >
-      <v-progress-linear
-        model-value="45"
-        color="cyan"
-        height="25"
-        reverse
-        >
-        
-      </v-progress-linear>
-    </v-progress-linear>
-
-    <br>
-
-    <v-progress-linear
-      v-model="knowledge"
-      height="25"
-    >
-    <v-progress-linear
-        model-value="35"
-        color="cyan"
-        height="25"
-        reverse
-        >
-      </v-progress-linear>
-      <v-progress-linear
-        model-value="100"
-        color="red"
-        height="25"
-        reverse
-        >
-        
-      </v-progress-linear>
-    </v-progress-linear>
-  </div>
-        </v-card>
-        </div>
-        <div>
-          <v-card height="200px"  width="25vw"  class=" rounded-lg bg-grey-darken-4 ">
-  
-  <div class="text-center">
-    Keys
-  </div>
-  <v-table class="mt-4" height="130px" theme="dark" density="compact">
-    <thead >
-      <tr>
-      </tr>
-    </thead>
-    <tbody>
-      <tr
-        v-for="item in items"
-        :key="item.name"
-      >
-        <td>{{ item.title }}</td>
-        <td>{{ item.status }}</td>
-      </tr>
-    </tbody>
-  </v-table>
-          </v-card>
-        </div>
-        <div>
-          <v-card height="200px"  width="25vw" class="bg-grey-darken-4 rounded-lg text-white d-flex align-center justify-center flex-column">
-          
-  <div class="text-center">
-    Keys
-  </div>
-  <v-table class="mt-4" height="130px" theme="dark" density="compact">
-    <thead >
-      <tr>
-      </tr>
-    </thead>
-    <tbody>
-      <tr
-        v-for="item in items"
-        :key="item.name"
-      >
-        <td>{{ item.title }}</td>
-        <td>{{ item.status }}</td>
-      </tr>
-    </tbody>
-  </v-table>
-  
-          </v-card>
-        </div>
-        
-      </v-card>
-
-
-      <v-card height="300px" class="d-flex  align-center justify-space-around">
-        <div>
-          <v-card height="250px" width="85vw" class="bg-grey-darken-4">
-          
-          
-          </v-card>
-        </div>
-      </v-card>
-
-    <!-- <LoginVue/> -->
-    </v-main>
-
+    </v-card>
+    
+    <v-card  height="200px" class="bg-transparent mx-10 mt-10 d-flex justify-center" > 
+        <v-card height="200px" width="50%" class="bg-blue-grey-darken-3 mr-10">
+        </v-card>      
+    
+        <v-card height="200px" width="50%" class="bg-blue-grey-darken-3 ">
+        </v-card>     
+    
+    </v-card>
+    
+    <v-card  height="200px" class="bg-blue-grey-darken-3 mx-10 mt-10" >      
+    </v-card>
+</v-main>
+    
   </v-app>
 </template>
 
 <script>
 // import LoginVue from './components/LoginVue.vue'
 // import NavigationVue from './components/NavigationVue.vue'
-
+// import AlcaliDesignVue from './components/AlcaliDesignVue.vue'
 
 export default {
   name: 'App',
   components: {
     // LoginVue,
     // NavigationVue,
+    // AlcaliDesignVue
   },
 
   data: () => ({
@@ -209,7 +110,8 @@ export default {
 }
 </script>
 <style>
-  .edit {
-    background-color: aqua;
+  .body {
+    background-color: #1e1e24;
   }
+
 </style>
