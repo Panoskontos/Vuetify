@@ -16,7 +16,7 @@
       <v-list nav class="bg-indigo">
           <v-list-item
             prepend-avatar="https://www.logolynx.com/images/logolynx/s_90/90cdeb260df361a39d97540d9c75a814.png"
-            title="BALCALI"
+            title="CORE NETWORKS"
           ></v-list-item>
       </v-list>
 
@@ -57,13 +57,15 @@
 
 <!-- <AlcaliDesignVue/> -->
 <v-main class="body ">
-    <div height="120px" class="bg-transparent mt-5 mx-10 d-flex justify-center" >
+    <div height="225px" class="bg-transparent mt-5 mx-10 d-flex justify-center" >
 
      <v-hover v-slot="{ isHovering, props }">
       <v-card 
        v-bind="props"
         :class="`elevation-${isHovering ? 24 : 6}`"
-      height="120px" width="40%" class="bg-blue-grey-darken-3 mr-10">
+      height="225px" width="60%" class="bg-blue-grey-darken-3 mr-10">
+
+
       </v-card>      
      </v-hover>
       
@@ -71,8 +73,11 @@
       <v-card 
        v-bind="props"
         :class="`elevation-${isHovering ? 24 : 6}`"
-      height="120px" width="30%" class="bg-blue-grey-darken-3 ">
-      </v-card>
+      height="225px" width="20%" class="bg-blue-grey-darken-3 ">
+
+      <KeysComponent/>
+
+</v-card>
       </v-hover>
       
       
@@ -80,8 +85,11 @@
       <v-card 
        v-bind="props"
         :class="`elevation-${isHovering ? 24 : 6}`"
-      height="120px" width="40%" class="bg-blue-grey-darken-3 ml-10">
-      </v-card>
+      height="225px" width="28%" class="bg-blue-grey-darken-3 ml-10">
+
+  <StatusComponent/>
+
+</v-card>
       </v-hover>      
 
     </div>
@@ -125,6 +133,8 @@
 // import LoginVue from './components/LoginVue.vue'
 // import NavigationVue from './components/NavigationVue.vue'
 // import AlcaliDesignVue from './components/AlcaliDesignVue.vue'
+import KeysComponent from './components/KeysComponent.vue'
+import StatusComponent from './components/StatusComponent.vue'
 
 export default {
   name: 'App',
@@ -132,7 +142,9 @@ export default {
     // LoginVue,
     // NavigationVue,
     // AlcaliDesignVue
-  },
+    KeysComponent,
+    StatusComponent
+},
 
   data: () => ({
     //
