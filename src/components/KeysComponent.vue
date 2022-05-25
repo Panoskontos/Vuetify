@@ -31,8 +31,10 @@
             0/1
         </div>
     </div>
+    
+    
     <v-divider class="mt-2 bg-grey" ></v-divider>
-        
+       
     <div class="d-flex justify-space-between px-5 mt-3 align-center text-grey">
         <div class="d-flex align-center text-body-2">
             <div icon class="mr-2">

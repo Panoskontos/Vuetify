@@ -57,14 +57,15 @@
 
 <!-- <AlcaliDesignVue/> -->
 <v-main class="body ">
-    <div height="225px" class="bg-transparent mt-5 mx-10 d-flex justify-center" >
+    <div height="225px" class="row bg-transparent mt-5 mx-10 d-flex justify-center" >
 
      <v-hover v-slot="{ isHovering, props }">
       <v-card 
        v-bind="props"
         :class="`elevation-${isHovering ? 24 : 6}`"
-      height="225px" width="60%" class="bg-blue-grey-darken-3 mr-10">
+      height="225px" width="60%" class="row-card bg-blue-grey-darken-3 mr-10">
 
+      <ConformityComponent/>
 
       </v-card>      
      </v-hover>
@@ -73,7 +74,7 @@
       <v-card 
        v-bind="props"
         :class="`elevation-${isHovering ? 24 : 6}`"
-      height="225px" width="20%" class="bg-blue-grey-darken-3 ">
+      height="225px" width="20%" class="row-card row-card-keys bg-blue-grey-darken-3 ">
 
       <KeysComponent/>
 
@@ -85,7 +86,7 @@
       <v-card 
        v-bind="props"
         :class="`elevation-${isHovering ? 24 : 6}`"
-      height="225px" width="28%" class="bg-blue-grey-darken-3 ml-10">
+      height="225px" width="28%" class="row-card row-card-status bg-blue-grey-darken-3 ml-10">
 
   <StatusComponent/>
 
@@ -135,6 +136,7 @@
 // import AlcaliDesignVue from './components/AlcaliDesignVue.vue'
 import KeysComponent from './components/KeysComponent.vue'
 import StatusComponent from './components/StatusComponent.vue'
+import ConformityComponent from './components/ConformityComponent.vue'
 
 export default {
   name: 'App',
@@ -143,7 +145,8 @@ export default {
     // NavigationVue,
     // AlcaliDesignVue
     KeysComponent,
-    StatusComponent
+    StatusComponent,
+    ConformityComponent
 },
 
   data: () => ({
@@ -166,5 +169,31 @@ export default {
   .body {
     background-color: #1e1e24;
   }
+
+@media only screen and (max-width: 1000px) {
+  .row {
+    background-color: rgb(255, 255, 255);
+    width: 80%;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .row-card {
+    width: 100% !important;
+    margin-bottom: 20px;
+    height: 205px !important;
+    margin: auto !important;
+  }
+
+  .row-card-keys {
+    height: 225px !important;
+  }
+
+  .row-card-status {
+    height: 225px !important;
+  }
+}
 
 </style>
